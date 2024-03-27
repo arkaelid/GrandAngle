@@ -29,10 +29,10 @@ if (isset($_GET['id'])) {
         echo "<p class='Dimensions'>".$oeuvre['largeur']. "x" .$oeuvre['hauteur']. "cm </p>";
         echo "<p class='Dimensions'>".$oeuvre['date_realisation']."</p>";
 
-        // Récupérer l'identifiant de langue correspondant au code de langue
+        
         $langId = $langIds[$lang];
 
-        // Requête pour récupérer la description de l'œuvre dans la langue sélectionnée
+        
         $sql_description = "SELECT contenu FROM traduction WHERE id_oeuvres = ? AND id_langues = ?";
         $requete_description = $db->prepare($sql_description);
         $requete_description->execute([$id_oeuvres, $langId]);

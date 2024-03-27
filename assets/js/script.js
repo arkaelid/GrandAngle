@@ -1,13 +1,3 @@
-/* const video = document.getElementById("video");
-
-video.addEventListener("timeupdate", function(){
-   
-    if(this.currentTime >=  69){
-        this.pause();
-        this.currentTime = 0;
-        this.play();
-    }
-}); */
 
 
 const menu = document.querySelector(".nav_menu");

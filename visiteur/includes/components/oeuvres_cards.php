@@ -13,11 +13,11 @@ $sqlTypes = "SELECT * FROM type_oeuvre";
 $requeteTypes = $db->query($sqlTypes);
 $types = $requeteTypes->fetchAll(PDO::FETCH_ASSOC);
 
-// on vérifie si un type d'œuvre est sélectionné dans l'URL
+
 if (isset($_GET['type_oeuvre'])) {
     $selected_type_id = $_GET['type_oeuvre'];
 } else {
-    // Si aucun type d'œuvre n'est sélectionné, on sélectionne le premier type par défaut
+   
     $selected_type_id = $types[0]['id_type_oeuvre'];
 }
 

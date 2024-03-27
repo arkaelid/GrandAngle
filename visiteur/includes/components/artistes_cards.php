@@ -62,13 +62,6 @@ $db = null;
 
 
 
-                    <!-- <img src="<?= $artiste["photo_profil"] ?>" alt="?"> -->
-                </div>
-                <!-- <p><?= $artiste["biographie_FR"] ?></p> -->
-                <!-- <p><?= nl2br(substr($artiste["biographie_FR"], 0, 3 * 20)); ?>...</p> -->
-                <!-- nl2br est une fonction PHP qui transforme les sauts de ligne (\n ou \r\n) en balises HTML <br>. 
-                Cela permet d'afficher correctement les sauts de ligne dans du texte affiché sur une page web. -->
-
                 <p><?php echo $ArtistDesc ?></p>
 
 

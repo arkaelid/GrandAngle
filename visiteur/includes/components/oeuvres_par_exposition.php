@@ -6,19 +6,19 @@ try {
     FROM exposition
     INNER JOIN contenir ON exposition.id_expo = contenir.id_expo
     INNER JOIN oeuvres_expo ON contenir.id_oeuvres = oeuvres_expo.id_oeuvres
-    ORDER BY exposition.id_expo;"; // Assurez-vous d'ordonner par ID d'exposition pour que les expositions soient regroupées ensemble
+    ORDER BY exposition.id_expo;"; 
     $stmt = $db->prepare($sql);
     $stmt->execute();
 
     $expositions = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    $previousExpoId = null; // Variable pour stocker l'ID de l'exposition précédente
+    $previousExpoId = null; 
     
     if (count($expositions) === 0) {
         echo "Aucune exposition trouvée.";
     } else {
         foreach ($expositions as $exposition) {
-            // Vérifier si c'est une nouvelle exposition
+            
             if ($exposition['id_expo'] != $previousExpoId) {
                 echo "<div class='expoAll'>";
                 echo "<h2>" . $exposition['nom_expo'] . "</h2>";
@@ -30,7 +30,7 @@ try {
             } else {
                 echo "";
             }
-            $previousExpoId = $exposition['id_expo']; // Mettre à jour l'ID de l'exposition précédente
+            $previousExpoId = $exposition['id_expo']; 
         }
     }
 } catch (PDOException $e) {
