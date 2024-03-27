@@ -1,8 +1,8 @@
 <?php
 $lang = isset($_GET['lang']) ? $_GET['lang'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
-$langList = ["FR", "EN", "DE", "RU", "CH"];
-$langIds = ["FR" => 1, "EN" => 2, "DE" => 3, "RU" => 4, "CH" => 5];
+$langList = ["FR", "EN", "DE", "RU", "ZH"];
+$langIds = ["FR" => 1, "EN" => 2, "DE" => 3, "RU" => 4, "ZH" => 5];
 
 if (!in_array($lang, $langList)) {
     $lang = "FR"; 

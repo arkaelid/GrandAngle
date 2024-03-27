@@ -20,7 +20,7 @@ if (!empty($_POST)) {
     ) {
 
         $dataImage = [
-            'img_link' => '/var/www/html/GrandAngle/assets/images/oeuvres/' . $_FILES['image_oeuvre']['name'],
+            'img_link' => '../assets/images/oeuvres/' . $_FILES['image_oeuvre']['name'],
             'img_relative_link' => '../assets/images/oeuvres/' . $_FILES['image_oeuvre']['name'],
             'img_file' => $_FILES['image_oeuvre']['tmp_name']
         ];

@@ -2,7 +2,7 @@
 $lang = isset($_GET['lang']) ? $_GET['lang'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 
-$langList = ["FR", "EN", "DE", "RU", "CH"];
+$langList = ["FR", "EN", "DE", "RU", "ZH"];
 
 
 if (!in_array($lang, $langList)) {

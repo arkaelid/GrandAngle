@@ -14,6 +14,7 @@ $sql = "SELECT oeuvres_expo.*, type_oeuvre.libelle_type_oeuvre
 FROM oeuvres_expo
 LEFT JOIN type_oeuvre ON oeuvres_expo.id_type_oeuvre = type_oeuvre.id_type_oeuvre";
 
+
 $requete = $db->query($sql);
 $oeuvres = $requete->fetchAll(PDO::FETCH_ASSOC);
 

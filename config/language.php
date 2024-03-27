@@ -1,7 +1,7 @@
 <?php
 
 
-$lang_array = array("FR", "EN", "DE", "RU", "CH");
+$lang_array = array("FR", "EN", "DE", "RU", "ZH");
 
 if(!isset($_SESSION['lang'])){
     if(!empty($_SERVER['HTTP_ACCEPT_LANGUAGE']))

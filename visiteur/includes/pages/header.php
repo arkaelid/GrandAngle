@@ -35,7 +35,7 @@ require_once "../config/language.php"; ?>
             <option value="EN" <?php if ($_SESSION['lang'] == "EN") { echo "selected"; } ?>>English</option>
             <option value="DE" <?php if ($_SESSION['lang'] == "DE") { echo "selected"; } ?>>Deutsh</option>
             <option value="RU" <?php if ($_SESSION['lang'] == "RU") { echo "selected"; } ?>>Russian</option>
-            <option value="ZH" <?php if ($_SESSION['lang'] == "CH") { echo "selected"; } ?>>中国人</option>
+            <option value="ZH" <?php if ($_SESSION['lang'] == "ZH") { echo "selected"; } ?>>中国人</option>
         </select>
     </form>
 </div>

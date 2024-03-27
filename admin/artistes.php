@@ -6,7 +6,8 @@ if (!isset($_SESSION['user'])) {
 }
 require_once "../config/pdo.php";
 $sql = "SELECT *
-    FROM artiste";
+    FROM artiste
+    ORDER BY nom_artiste";
 $requete = $db->query($sql);
 $artistes = $requete->fetchAll(PDO::FETCH_ASSOC);
 $db = null;

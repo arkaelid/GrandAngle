@@ -3,7 +3,7 @@ require_once "../config/pdo.php";
 $lang = isset($_GET['lang']) ? $_GET['lang'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 
-$langList = ["FR", "EN", "DE", "RU", "CH"];
+$langList = ["FR", "EN", "DE", "RU", "ZH"];
 
 
 if (!in_array($lang, $langList)) {
@@ -42,7 +42,7 @@ $db = null;
             $ArtistDesc = substr($artiste["biographie_RU"], 0, 3 * 25) . '...';
             break;
         case "CH":
-            $ArtistDesc = substr($artiste["biographie_CH"], 0, 3 * 25) . '...';
+            $ArtistDesc = substr($artiste["biographie_ZH"], 0, 3 * 25) . '...';
             break;
         default:
             
