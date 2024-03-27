@@ -9,7 +9,7 @@ $langList = ["FR", "EN", "DE", "RU", "ZH"];
 if (!in_array($lang, $langList)) {
     $lang = "FR"; 
 }
-$sql = "SELECT id_artiste, nom_artiste, prenom_artiste, biographie_FR, biographie_EN, biographie_DE, biographie_RU, biographie_CH, photo_profil
+$sql = "SELECT id_artiste, nom_artiste, prenom_artiste, biographie_FR, biographie_EN, biographie_DE, biographie_RU, biographie_ZH, photo_profil
         FROM artiste";
         
 $requete = $db->query($sql);
