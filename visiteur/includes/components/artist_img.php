@@ -11,7 +11,7 @@ if (!in_array($lang, $langList)) {
 $id_artiste = $_GET['id'];
 
 
-$sql = "SELECT a.nom_artiste, a.prenom_artiste, a.photo_profil
+$sql = "SELECT a.nom_artiste, a.prenom_artiste, a.photo_profil, a.id_artiste
         FROM artiste a
         INNER JOIN présenter p ON a.id_artiste = p.id_artiste
         WHERE p.id_oeuvres = :id_oeuvres";
@@ -37,7 +37,10 @@ $artistes = $requete->fetchAll(PDO::FETCH_ASSOC);
                     $imgUrl = !empty($artiste['photo_profil']) && file_exists($artiste['photo_profil']) ? $artiste['photo_profil'] : "./assets/images/img_cards/placeimage.jpg";
                     ?>
                     <img src="<?= $imgUrl ?>" alt="projet image">
-                </div>
+                   
+                </div> <button>
+                <a href="details_artist.php?id=<?= $artiste['id_artiste'] ?>&lang=<?= $lang ?>" id="<?= $artiste["id_artiste"] ?>"><?php echo seeMore ?></a>
+                </button>
             </div>
         <?php endforeach; ?>
     </section>
