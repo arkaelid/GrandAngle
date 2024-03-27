@@ -62,6 +62,10 @@ $db = null;
 
 
 
+                
+                </div>
+               
+
                 <p><?php echo $ArtistDesc ?></p>
 
 
